@@ -24,4 +24,26 @@ const ProjectRoutes = () => {
             navigate("/");
         };
     }, [currentUser, setCurrentUser, navigate]);
+
+    let element = useRoutes([
+        {
+            path: "/",
+            element: <Dashboard/>
+        },
+        {
+            path: "/auth",
+            element: <Login/>
+        },
+        {
+            path: "/signup",
+            element: <Signup/>
+        },
+        {
+            path: "/profile",
+            element: <Profile/>
+        }
+    ]);
+    return element;
 };
+
+export default ProjectRoutes;
